@@ -58,7 +58,6 @@ function compareFields() {
         document.getElementById("ResultTextArea").innerHTML = "YOU WIN!"
     }
 
-
     if (playerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
     }
@@ -67,5 +66,11 @@ function compareFields() {
         document.getElementById("ResultTextArea").innerHTML = "YOU WIN!"
     }
 
+    if (playerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>") {
+        document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
+    }
 
+    if (playerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>") {
+        document.getElementById("ResultTextArea").innerHTML = "YOU WIN!"
+    }
 }
