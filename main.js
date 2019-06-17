@@ -17,14 +17,17 @@ var computerChoise = [
 function showRock() {
     document.getElementById("iconArea").innerHTML = rock;
     document.getElementById("computerIconArea").innerHTML = " ";
+    document.getElementById("ResultTextArea").innerHTML = " ";
 }
 function showPaper() {
     document.getElementById("iconArea").innerHTML = paper;
     document.getElementById("computerIconArea").innerHTML = " ";
+    document.getElementById("ResultTextArea").innerHTML = " ";
 }
 function showScissors() {
     document.getElementById("iconArea").innerHTML = scissors;
     document.getElementById("computerIconArea").innerHTML = " ";
+    document.getElementById("ResultTextArea").innerHTML = " ";
 }
 
 function showRandom() {
@@ -52,25 +55,19 @@ function compareFields() {
     
     if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
-    }
-
-    if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>") {
+    } else if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU WIN!"
     }
 
     if (playerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
-    }
-
-    if (playerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>") {
+    } else if (playerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU WIN!"
     }
 
     if (playerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
-    }
-
-    if (playerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>") {
+    } else if (playerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU WIN!"
     }
 }

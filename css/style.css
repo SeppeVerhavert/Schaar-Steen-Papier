@@ -1,3 +1,8 @@
+html {
+    background-image: url("https://i.ytimg.com/vi/zoJIKKtho_4/maxresdefault.jpg");
+    background-size: cover;
+}
+
 body {
     width: 80%;
     margin: 10%;
@@ -19,4 +24,9 @@ body {
 
 button {
     margin:1px;
+}
+
+#ResultTextArea {
+    font-size: 3rem;
+    text-align: center;
 }
