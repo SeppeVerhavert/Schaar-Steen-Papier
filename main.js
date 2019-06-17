@@ -4,18 +4,15 @@ document.getElementById("scissorsBtn").addEventListener("click", showScissors);
 document.getElementById("ComputerBtn").addEventListener("click", showRandom);
 document.getElementById("resetBtn").addEventListener("click", resetFields);
 
-var rock = '<i class=\"fas fa-hand-rock fa-4x\"></i>';
-var paper = '<i class=\"fas fa-hand-paper fa-4x\"></i>';
-var scissors = '<i class=\"fas fa-hand-scissors fa-4x\">';
+let rock = '<i class=\"fas fa-hand-rock fa-4x\"></i>';
+let paper = '<i class=\"fas fa-hand-paper fa-4x\"></i>';
+let scissors = '<i class=\"fas fa-hand-scissors fa-4x\">';
 
-var computerChoise = [
+let computerChoise = [
     '<i class="fas fa-hand-rock fa-4x" aria-hidden="true"></i>',
     '<i class="fas fa-hand-paper fa-4x" aria-hidden="true"></i>',
     '<i class="fas fa-hand-scissors fa-4x" aria-hidden="true"></i>'
 ];
-
-var playerResult = document.getElementById("iconArea").innerHTML;
-var computerResult = document.getElementById("computerIconArea").innerHTML;
 
 function showRock() {
     document.getElementById("iconArea").innerHTML = rock;
@@ -35,16 +32,10 @@ function showScissors() {
 
 function showRandom() {
 
-    // if (playerResult.value.length === 0 ){
-        document.getElementById("ResultTextArea").innerHTML = "Select your weapon!";
-    // } 
-    // else {
-
-    var rand = computerChoise[Math.floor(Math.random() * computerChoise.length)];
+    let rand = computerChoise[Math.floor(Math.random() * computerChoise.length)];
 
     document.getElementById("computerIconArea").innerHTML = rand;
     compareFields();
-//     }
 }
 
 function resetFields() {
@@ -55,10 +46,13 @@ function resetFields() {
 
 function compareFields() {
 
+    let playerResult = document.getElementById("iconArea").innerHTML;
+    let computerResult = document.getElementById("computerIconArea").innerHTML;
+
     if (playerResult === computerResult) {
         document.getElementById("ResultTextArea").innerHTML = "DRAW"
     }
-
+    
     if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
     } else if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>") {
