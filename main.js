@@ -18,7 +18,6 @@ function showRock() {
     document.getElementById("iconArea").innerHTML = rock;
     document.getElementById("computerIconArea").innerHTML = " ";
     document.getElementById("ResultTextArea").innerHTML = " ";
-    console.log(playerResult);
 }
 
 function showPaper() {
