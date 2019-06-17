@@ -1,11 +1,12 @@
 html {
-    background-image: url("https://i.ytimg.com/vi/zoJIKKtho_4/maxresdefault.jpg");
+    background-image: url("https://thumbs.gfycat.com/OrdinaryUnkemptHornbill-size_restricted.gif");
     background-size: cover;
 }
 
 body {
     width: 80%;
     margin: 10%;
+    margin-top: 5%;
 }
 
 .btn-group {
@@ -29,4 +30,11 @@ button {
 #ResultTextArea {
     font-size: 3rem;
     text-align: center;
+}
+
+h3 {
+    font-size: 4rem;
+    text-align: center;
+    color: #ff4444;
+    text-shadow: 3px 2px#37474F;
 }
