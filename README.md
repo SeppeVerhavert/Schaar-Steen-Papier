@@ -57,3 +57,6 @@ document.getElementById("ResultTextArea").innerHTML  =  "YOU WIN!"
 ## Live version
 https://seppeverhavert.github.io/Schaar-Steen-Papier/
 
+## Dependencies
+	- Bootstrap 4
+	- Font-Awesome
