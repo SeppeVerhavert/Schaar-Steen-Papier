@@ -4,17 +4,15 @@ document.getElementById("scissorsBtn").addEventListener("click", showScissors);
 document.getElementById("ComputerBtn").addEventListener("click", showRandom);
 document.getElementById("resetBtn").addEventListener("click", resetFields);
 
-var rock = "<i class=\"fas fa-hand-rock fa-4x\"></i>";
-var paper = "<i class=\"fas fa-hand-paper fa-4x\"></i>";
-var scissors = "<i class=\"fas fa-hand-scissors fa-4x\">";
+var rock = '<i class=\"fas fa-hand-rock fa-4x\"></i>';
+var paper = '<i class=\"fas fa-hand-paper fa-4x\"></i>';
+var scissors = '<i class=\"fas fa-hand-scissors fa-4x\">';
 
 var computerChoise = [
-    '<i class="fas fa-hand-rock fa-4x"></i>',
-    '<i class="fas fa-hand-paper fa-4x"></i>',
-    '<i class="fas fa-hand-scissors fa-4x">'
+    '<i class="fas fa-hand-rock fa-4x" aria-hidden="true"></i>',
+    '<i class="fas fa-hand-paper fa-4x" aria-hidden="true"></i>',
+    '<i class="fas fa-hand-scissors fa-4x aria-hidden="true"">'
 ];
-
-var rand = computerChoise[Math.floor(Math.random() * computerChoise.length)];
 
 function showRock() {
     document.getElementById("iconArea").innerHTML = rock;
@@ -30,18 +28,24 @@ function showScissors() {
 }
 
 function showRandom() {
+
+    var rand = computerChoise[Math.floor(Math.random() * computerChoise.length)];
+
     document.getElementById("computerIconArea").innerHTML = rand;
     compareFields();
 }
 
 function resetFields() {
-    console.log("yay");
     document.getElementById("iconArea").innerHTML = " ";
     document.getElementById("computerIconArea").innerHTML = " ";
 }
 
 function compareFields() {
-    if (rand === rock || rand === paper || rand === scissors){
-        console.log("draw")
+
+    var playerResult = document.getElementById("iconArea").innerHTML;
+    var computerResult = document.getElementById("computerIconArea").innerHTML;
+
+    if (playerResult === computerResult) {
+        
     }
 }
