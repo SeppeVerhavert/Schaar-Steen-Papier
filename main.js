@@ -14,6 +14,9 @@ var computerChoise = [
     '<i class="fas fa-hand-scissors fa-4x" aria-hidden="true"></i>'
 ];
 
+var playerResult = document.getElementById("iconArea").innerHTML;
+var computerResult = document.getElementById("computerIconArea").innerHTML;
+
 function showRock() {
     document.getElementById("iconArea").innerHTML = rock;
     document.getElementById("computerIconArea").innerHTML = " ";
@@ -32,11 +35,20 @@ function showScissors() {
 
 function showRandom() {
 
+    if (playerResult.length === 0 ){
+        document.getElementById("ResultTextArea").innerHTML = "Select your weapon!";
+    } 
+    else {
+
     var rand = computerChoise[Math.floor(Math.random() * computerChoise.length)];
 
     document.getElementById("computerIconArea").innerHTML = rand;
     compareFields();
+    }
 }
+
+
+
 
 function resetFields() {
     document.getElementById("iconArea").innerHTML = " ";
@@ -46,13 +58,10 @@ function resetFields() {
 
 function compareFields() {
 
-    var playerResult = document.getElementById("iconArea").innerHTML;
-    var computerResult = document.getElementById("computerIconArea").innerHTML;
-
     if (playerResult === computerResult) {
         document.getElementById("ResultTextArea").innerHTML = "DRAW"
     }
-    
+
     if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>") {
         document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
     } else if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>") {
