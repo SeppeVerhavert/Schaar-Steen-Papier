@@ -35,20 +35,17 @@ function showScissors() {
 
 function showRandom() {
 
-    if (playerResult.length === 0 ){
+    // if (playerResult.value.length === 0 ){
         document.getElementById("ResultTextArea").innerHTML = "Select your weapon!";
-    } 
-    else {
+    // } 
+    // else {
 
     var rand = computerChoise[Math.floor(Math.random() * computerChoise.length)];
 
     document.getElementById("computerIconArea").innerHTML = rand;
     compareFields();
-    }
+//     }
 }
-
-
-
 
 function resetFields() {
     document.getElementById("iconArea").innerHTML = " ";
