@@ -46,11 +46,17 @@ function compareFields() {
     var playerResult = document.getElementById("iconArea").innerHTML;
     var computerResult = document.getElementById("computerIconArea").innerHTML;
 
-    console.log(playerResult);
-    console.log(computerResult);
-
     if (playerResult === computerResult) {
-
         document.getElementById("ResultTextArea").innerHTML = "DRAW"
     }
+    
+    if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-paper fa-4x\" aria-hidden=\"true\"></i>") {
+        document.getElementById("ResultTextArea").innerHTML = "YOU LOSE!"
+    }
+
+    if (playerResult === "<i class=\"fas fa-hand-rock fa-4x\" aria-hidden=\"true\"></i>" && computerResult === "<i class=\"fas fa-hand-scissors fa-4x\" aria-hidden=\"true\"></i>") {
+        document.getElementById("ResultTextArea").innerHTML = "YOU WIN!"
+    }
+
+
 }
