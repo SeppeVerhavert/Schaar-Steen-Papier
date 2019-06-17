@@ -11,7 +11,7 @@ var scissors = '<i class=\"fas fa-hand-scissors fa-4x\">';
 var computerChoise = [
     '<i class="fas fa-hand-rock fa-4x" aria-hidden="true"></i>',
     '<i class="fas fa-hand-paper fa-4x" aria-hidden="true"></i>',
-    '<i class="fas fa-hand-scissors fa-4x aria-hidden="true"">'
+    '<i class="fas fa-hand-scissors fa-4x" aria-hidden="true"></i>'
 ];
 
 function showRock() {
@@ -38,6 +38,7 @@ function showRandom() {
 function resetFields() {
     document.getElementById("iconArea").innerHTML = " ";
     document.getElementById("computerIconArea").innerHTML = " ";
+    document.getElementById("ResultTextArea").innerHTML = " "
 }
 
 function compareFields() {
@@ -45,7 +46,11 @@ function compareFields() {
     var playerResult = document.getElementById("iconArea").innerHTML;
     var computerResult = document.getElementById("computerIconArea").innerHTML;
 
+    console.log(playerResult);
+    console.log(computerResult);
+
     if (playerResult === computerResult) {
-        
+
+        document.getElementById("ResultTextArea").innerHTML = "DRAW"
     }
 }
