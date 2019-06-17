@@ -15,5 +15,13 @@ function showScissors() {
 }
 
 function showRandom() {
-    document.getElementById("computerIconArea").innerHTML = "<i class=\"fas fa-hand-scissors fa-4x\">";
+    var computerChoise = [
+        '<i class="fas fa-hand-rock fa-4x"></i>',
+        '<i class="fas fa-hand-paper fa-4x"></i>',
+        '<i class="fas fa-hand-scissors fa-4x">'
+    ];
+
+    var rand = computerChoise[Math.floor(Math.random() * computerChoise.length)];
+
+    document.getElementById("computerIconArea").innerHTML = rand;
 }
