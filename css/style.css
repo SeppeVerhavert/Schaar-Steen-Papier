@@ -1,7 +1,20 @@
+body {
+    width: 80%;
+    margin: 10%;
+}
+
 .btn-group {
     box-sizing: border-box;
     align-content: center;
-    margin-top: 40%;
+}
+
+#buttons {
+    margin: 5%;
+}
+
+.iconArea {
+    box-sizing: border-box;
+    align-content: center;
 }
 
 button {
