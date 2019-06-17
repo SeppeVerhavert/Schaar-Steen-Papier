@@ -55,5 +55,5 @@ document.getElementById("ResultTextArea").innerHTML  =  "YOU WIN!"
 	- Add a scoreboard
 	- Function compareFields doesn't compute when player has not made a choice
 ## Live version
-
+https://seppeverhavert.github.io/Schaar-Steen-Papier/
 
