@@ -1,6 +1,9 @@
 .btn-group {
     box-sizing: border-box;
     align-content: center;
-    left: 35%;
-    margin-top: 25%;
+    margin-top: 40%;
+}
+
+button {
+    margin:1px;
 }
